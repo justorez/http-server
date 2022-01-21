@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-'use strict';
 
 var chalk     = require('chalk'),
     os         = require('os'),
@@ -166,8 +165,7 @@ function listen(port) {
   if (proxy) {
     try {
       new url.URL(proxy)
-    }
-    catch (err) {
+    } catch (err) {
       logger.info(chalk.red('Error: Invalid proxy url'));
       process.exit(1);
     }
@@ -181,15 +179,14 @@ function listen(port) {
     };
     try {
       fs.lstatSync(options.https.cert);
-    }
-    catch (err) {
+    } catch (err) {
       logger.info(chalk.red('Error: Could not find certificate ' + options.https.cert));
       process.exit(1);
     }
+
     try {
       fs.lstatSync(options.https.key);
-    }
-    catch (err) {
+    } catch (err) {
       logger.info(chalk.red('Error: Could not find private key ' + options.https.key));
       process.exit(1);
     }
