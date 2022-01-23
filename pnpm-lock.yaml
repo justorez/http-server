@@ -15,6 +15,7 @@ specifiers:
   minimist: ^1.2.5
   opener: ^1.5.1
   portfinder: ^1.0.28
+  qrcode-terminal: ^0.12.0
   request: ^2.88.2
   secure-compare: 3.0.1
   tap: ^14.11.0
@@ -32,6 +33,7 @@ dependencies:
   minimist: 1.2.5
   opener: 1.5.2
   portfinder: 1.0.28
+  qrcode-terminal: 0.12.0
   secure-compare: 3.0.1
   union: 0.5.0
   url-join: 4.0.1
@@ -2261,6 +2263,11 @@ packages:
     resolution: {integrity: sha1-tYsBCsQMIsVldhbI0sLALHv0eew=, tarball: punycode/download/punycode-2.1.1.tgz}
     engines: {node: '>=6'}
     dev: true
+
+  /qrcode-terminal/0.12.0:
+    resolution: {integrity: sha1-u1tpnvf58FBQkqN0i+RGT+cbWBk=, tarball: qrcode-terminal/download/qrcode-terminal-0.12.0.tgz}
+    hasBin: true
+    dev: false
 
   /qs/6.10.3:
     resolution: {integrity: sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==, tarball: qs/download/qs-6.10.3.tgz}

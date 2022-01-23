@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
 var chalk     = require('chalk'),
-    os         = require('os'),
     httpServer = require('../lib/http-server'),
+    address = require('../lib/utils/address')(),
     portfinder = require('portfinder'),
     opener     = require('opener'),
+    qrcode     = require('qrcode-terminal'),
 
     fs         = require('fs'),
     url        = require('url');
@@ -13,7 +14,6 @@ var argv = require('minimist')(process.argv.slice(2), {
     tls: 'ssl'
   }
 });
-var ifaces = os.networkInterfaces();
 
 process.title = 'http-server';
 
@@ -220,13 +220,10 @@ function listen(port) {
     if (argv.a && host !== '0.0.0.0') {
       logger.info(`  ${protocol}${host}:${chalk.green(port.toString())}`);
     } else {
-      Object.keys(ifaces).forEach(function (dev) {
-        ifaces[dev].forEach(function (details) {
-          if (details.family === 'IPv4') {
-            logger.info(('  ' + protocol + details.address + ':' + chalk.green(port.toString())));
-          }
-        });
+      address.all.forEach(ip => {
+        logger.info(`  ${protocol}${ip}:${chalk.green(port.toString())}`);
       });
+      qrcode.generate(`${protocol}${address.ip}:${port}`, { small: true });    
     }
 
     if (typeof proxy === 'string') {
