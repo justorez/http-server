@@ -95,7 +95,7 @@
     "he": "^1.2.0",
     "html-encoding-sniffer": "^3.0.0",
     "http-proxy": "^1.18.1",
-    "mime": "^1.6.0",
+    "mime": "^3.0.0",
     "minimist": "^1.2.5",
     "opener": "^1.5.1",
     "portfinder": "^1.0.28",

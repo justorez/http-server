@@ -11,7 +11,7 @@ specifiers:
   he: ^1.2.0
   html-encoding-sniffer: ^3.0.0
   http-proxy: ^1.18.1
-  mime: ^1.6.0
+  mime: ^3.0.0
   minimist: ^1.2.5
   opener: ^1.5.1
   portfinder: ^1.0.28
@@ -29,7 +29,7 @@ dependencies:
   he: 1.2.0
   html-encoding-sniffer: 3.0.0
   http-proxy: 1.18.1
-  mime: 1.6.0
+  mime: 3.0.0
   minimist: 1.2.5
   opener: 1.5.2
   portfinder: 1.0.28
@@ -1842,9 +1842,16 @@ packages:
     dev: true
 
   /mime/1.6.0:
-    resolution: {integrity: sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=, tarball: mime/download/mime-1.6.0.tgz?cache=0&sync_timestamp=1636370946189&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fmime%2Fdownload%2Fmime-1.6.0.tgz}
+    resolution: {integrity: sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=, tarball: mime/download/mime-1.6.0.tgz}
     engines: {node: '>=4'}
     hasBin: true
+    dev: true
+
+  /mime/3.0.0:
+    resolution: {integrity: sha1-s3RVDco6DBhEOwyVCmpY8ZMc96c=, tarball: mime/download/mime-3.0.0.tgz}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    dev: false
 
   /mimic-fn/1.2.0:
     resolution: {integrity: sha1-ggyGo5M0ZA6ZUWkovQP8qIBX0CI=, tarball: mimic-fn/download/mimic-fn-1.2.0.tgz}

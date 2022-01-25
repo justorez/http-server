@@ -2,7 +2,7 @@
 
 var chalk     = require('chalk'),
     httpServer = require('../lib/http-server'),
-    address = require('../lib/utils/address')(),
+    address = require('../lib/utils/address'),
     portfinder = require('portfinder'),
     opener     = require('opener'),
     qrcode     = require('qrcode-terminal'),
@@ -56,7 +56,7 @@ if (argv.h || argv.help) {
     '',
     '  -r --robots        Respond to /robots.txt [User-agent: *\\nDisallow: /]',
     '  --no-dotfiles      Do not show dotfiles',
-    '  --mimetypes        Path to a .types file for custom mimetype definition',
+    '  --mimetypes        Path to a .json file for custom mimetype definition',
     '  -h --help          Print this list and exit.',
     '  -v --version       Print the version and exit.'
   ].join('\n'));
@@ -223,7 +223,7 @@ function listen(port) {
       address.all.forEach(ip => {
         logger.info(`  ${protocol}${ip}:${chalk.green(port.toString())}`);
       });
-      qrcode.generate(`${protocol}${address.ip}:${port}`, { small: true });    
+      qrcode.generate(`${protocol}${address.ip}:${port}`, { small: true });
     }
 
     if (typeof proxy === 'string') {

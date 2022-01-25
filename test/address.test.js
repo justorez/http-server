@@ -1,5 +1,5 @@
 const test = require('tap').test;
-const address = require('../lib/utils/address')();
+const address = require('../lib/utils/address');
 
 test('print qrcode in terminal', (t) => {
   t.plan(2);
